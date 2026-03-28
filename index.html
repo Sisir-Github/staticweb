@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sisir Paudel Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 50px;
+    background:#020617;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+/* Hero */
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+/* Sections */
+section{
+    padding:80px 50px;
+    text-align:center;
+}
+
+/* Skills */
+.skill-box{
+    display:inline-block;
+    padding:15px 25px;
+    margin:10px;
+    background:#1e293b;
+    border-radius:8px;
+}
+
+/* Projects */
+.project-card{
+    display:inline-block;
+    width:250px;
+    height:150px;
+    background:#1e293b;
+    margin:15px;
+    line-height:150px;
+}
+
+/* Contact */
+.contact input, .contact textarea{
+    display:block;
+    width:300px;
+    margin:10px auto;
+    padding:10px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+}
+</style>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2 class="logo">Sisir</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <h1>Hello, I'm <span>Sisir Paudel</span></h1>
+        <p>Frontend Developer | Designer | Freelancer</p>
+        <button>View Projects</button>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            I am a web developer who creates modern and responsive websites
+            using HTML, CSS and JavaScript.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="skill-box">HTML</div>
+        <div class="skill-box">CSS</div>
+        <div class="skill-box">JavaScript</div>
+        <div class="skill-box">React</div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-card">Project 1</div>
+        <div class="project-card">Project 2</div>
+        <div class="project-card">Project 3</div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <button>Send</button>
+    </section>
+
+    <footer>
+        <p>© 2026 Sisir Paudel</p>
+    </footer>
+
+<script src="script.js"></script>
+<script>
+    // Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+</body>
+</html>
